@@ -1,3 +1,4 @@
+//print odd numbers in the array
 (function(arr){
   var odds = [];
   for(let i=0;i<arr.length;i++)
@@ -9,6 +10,10 @@
 console.log(odds);
 }
   )([2,3,4,5,6,7,8]) 
+                                                       /*expected ouput:
+                                                       3,5,7]
+*/
+
 //Convert all the strings to title caps in a string array
 
 var titlecase = function(str){
@@ -20,7 +25,9 @@ var titlecase = function(str){
 }
 var str = ["This","is","a","sample","string"];
 titlecase(str)
-
+                                                     /*expected output:
+                                                     This Is A Sample String
+*/
 //Sum of all numbers in an array
 (function(arr){
   var sum=0;
@@ -30,8 +37,9 @@ titlecase(str)
   }
   console.log(sum);
 })([10,20,34,56,78,94])
-
-
+                                                           /*expected output:
+                                                           292
+*/
 //Return all the prime numbers in an array
 
 var primearr = [3,5,7,11,34,54,98,71,91,101]
@@ -48,9 +56,10 @@ var prime = function(arr){
   })
 	console.log(temp);
 }
-
 prime(primearr);
-
+                                                           /* expected output
+                                                           [3, 5, 7, 11, 71, 101]
+*/
 
 //Return all the palindromes in an array
 var palarr = ["Adam","malakova","lava alones","mia","jhonny sins"]
@@ -61,6 +70,9 @@ var palindrome = function(str){
   console.log(arr)
 }
 palindrome(palarr)
+                                                     /*expected ouput:
+                                                     []
+*/
 //Return median of two sorted arrays of same size 
 
 (function(arr1,arr2){
@@ -72,17 +84,19 @@ palindrome(palarr)
   console.log(sum/temp.length)
 
 })([40,50,60],[100,200,300])
+                                                     /*expected output: 125
+                                                     */
 
 //Remove duplicates from an array
 var duparr = [2,3,3,3,4,4,4,6,5,4,6,2,7,8];
 
-function removedup(arr){
-  var dup = arr.filter((val,index,self)=>self.indexOf(val)===index)
-  console.log(dup);
-
-}
-
-removedup(duparr);
+let arr = duparr.filter((c, index) => {
+    return duparr.indexOf(c) === index;
+});
+console.log(arr);
+                                                       /* expected output:
+                                                        [ 2, 3, 4, 6, 5, 7, 8 ]
+                                                       */
 //Rotate an array by k times and return the rotated array
 
 var k = 2;
@@ -97,6 +111,8 @@ function rotate(arr,k){
 }
 
 rotate(rot,k)
- 
+                                                 /*expevcted output:
+                                                [ 2, 5, 7, 3, 12, 9 ]
+                                                 */
    
     
