@@ -1,2 +1,5 @@
-# day_5_task
-//anonymous function &amp; IIFE
+# day_5-Functions
+#function 
+#IIFE
+#Arrow function
+#Anonymous functions
