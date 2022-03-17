@@ -101,7 +101,6 @@ console.log(arr);
 
 var k = 2;
 var rot = [7,3,12,9,2,5];
-
 function rotate(arr,k){
   for(let i=0;i<k;i++)
   {
